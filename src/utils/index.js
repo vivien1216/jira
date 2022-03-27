@@ -2,8 +2,9 @@
  * @Author: vivien
  * @Date: 2021-12-13 19:31:58
  * @Last Modified by: vivien
- * @LastEditTime: 2021-12-13 20:13:12
+ * @LastEditTime: 2022-02-20 16:48:22
  */
+import { useEffect, useState } from "react";
 export const isFalsy = (value) => (value === 0 ? false : !value);
 
 // 在一个函数里，改变传入的对象本身是不好的
@@ -18,4 +19,23 @@ export const cleanObject = (object) => {
     }
   });
   return result;
+};
+
+export const useMount = (callback) => {
+  useEffect(() => {
+    callback();
+    // eslint-disable-next-line
+  }, []);
+};
+
+export const useDebounce = (value, delay) => {
+  const [debouncedValue, setDebouncedValue] = useState(value);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setDebouncedValue(value), delay);
+
+    return () => clearTimeout(timeout);
+  }, [value, delay]);
+
+  return debouncedValue;
 };
