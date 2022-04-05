@@ -2,7 +2,7 @@
  * @Author: vivien
  * @Date: 2021-12-10 09:25:15
  * @Last Modified by: vivien
- * @LastEditTime: 2022-04-03 15:38:03
+ * @LastEditTime: 2022-04-05 20:55:58
  */
 
 export interface User {
@@ -11,6 +11,7 @@ export interface User {
   email: string;
   title: string;
   organization: string;
+  token: string;
 }
 
 interface SearchPanelProps {
