@@ -2,8 +2,9 @@
  * @Author: vivien
  * @Date: 2022-04-03 16:04:00
  * @Last Modified by: vivien
- * @LastEditTime: 2022-04-03 16:36:01
+ * @LastEditTime: 2022-05-04 23:08:17
  */
+import React from "react";
 import { useArray, useMount } from "utils";
 
 export const TsReactTest = () => {
