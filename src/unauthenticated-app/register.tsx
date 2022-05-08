@@ -2,11 +2,12 @@
  * @Author: vivien
  * @Date: 2022-04-05 20:47:30
  * @Last Modified by: vivien
- * @LastEditTime: 2022-05-04 23:06:20
+ * @LastEditTime: 2022-05-08 17:20:31
  */
-import { Button, Form, Input } from "antd";
+import { Form, Input } from "antd";
 import React from "react";
 import { useAuth } from "screens/context/auth-context";
+import { LongButton } from "unauthenticated-app";
 
 // interface Base {
 //   id: number
@@ -46,9 +47,9 @@ export const RegisterScreen = () => {
         <Input placeholder="请输入密码" type="password" id={"password"} />
       </Form.Item>
       <Form.Item>
-        <Button htmlType={"submit"} type={"primary"}>
+        <LongButton htmlType={"submit"} type={"primary"}>
           注册
-        </Button>
+        </LongButton>
       </Form.Item>
     </Form>
   );

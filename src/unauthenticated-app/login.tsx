@@ -2,11 +2,12 @@
  * @Author: vivien
  * @Date: 2022-04-05 20:47:42
  * @Last Modified by: vivien
- * @LastEditTime: 2022-05-04 23:06:28
+ * @LastEditTime: 2022-05-08 17:19:36
  */
-import { Button, Form, Input } from "antd";
+import { Form, Input } from "antd";
 import React from "react";
 import { useAuth } from "screens/context/auth-context";
+import { LongButton } from "unauthenticated-app";
 
 export const LoginScreen = () => {
   const { login } = useAuth();
@@ -30,9 +31,9 @@ export const LoginScreen = () => {
         <Input placeholder={"密码"} type="password" id={"password"} />
       </Form.Item>
       <Form.Item>
-        <Button htmlType={"submit"} type={"primary"}>
+        <LongButton htmlType={"submit"} type={"primary"}>
           登录
-        </Button>
+        </LongButton>
       </Form.Item>
     </Form>
   );
